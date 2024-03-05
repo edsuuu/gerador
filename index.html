@@ -3,73 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Gerador de Números Aleatórios</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      table {
-        border-collapse: collapse;
-      }
-      th,
-      td {
-        border: 1px solid black;
-        padding: 4px;
-        text-align: center;
-      }
-
-      button {
-        margin: auto;
-      }
-      .container {
-        height: 100vh;
-        margin-top: 10px;
-        margin-bottom: 50px;
-        
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-      }
-      .gerador50,
-      .gerador6,
-      .gerador25 {
-        text-align: center;
-        margin: 10px;
-        border: 1px solid black;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-      .gerador50{
-        margin-top: 50px;
-      }
-
-      .gerador25 {
-        padding-bottom: 30px;
-        margin-bottom: 30px;
-      }
-
-      button {
-        padding: 10px;
-        font-size: 1rem;
-        color: black;
-        font-weight: bold;
-      }
-    </style>
   </head>
   <body>
     <div class="container">
+      <header>
+          <h1>Number Generator</h1>
+      </header>
       <div class="gerador50">
         <h1>Gerar de 50 Números Lotomania</h1>
-        <button onclick="gerar50Numeros()">Gerar Novos Números</button>
+        <button onclick="gerar50Numeros()">Clique Aqui Para Gerar</button>
         <br />
         <table id="tabelaNumeros">
           <thead>
@@ -88,19 +32,19 @@
 
       <div class="gerador6">
         <h1>Gerar 6 Números MegaSena</h1>
-        <button onclick="gerar6Numeros()">Gerar Novos Números</button>
+        <button onclick="gerar6Numeros()">Clique Aqui Para Gerar</button>
         <br />
 
         <table id="tabelaNumeros6">
           <thead>
             <br />
             <tr>
-                <th>Num 1</th>
-                <th>Num 2</th>
-                <th>Num 3</th>
-                <th>Num 4</th>
-                <th>Num 5</th>
-                <th>Num 6</th>
+              <th>Num 1</th>
+              <th>Num 2</th>
+              <th>Num 3</th>
+              <th>Num 4</th>
+              <th>Num 5</th>
+              <th>Num 6</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -109,7 +53,7 @@
 
       <div class="gerador25">
         <h1>Gerar 15 Números LotoFacil</h1>
-        <button onclick="gerar25Numeros()">Gerar Novos Números</button>
+        <button onclick="gerar25Numeros()">Clique Aqui Para Gerar</button>
         <br />
 
         <table id="tabelaNumeros25">
@@ -126,73 +70,12 @@
           <tbody></tbody>
         </table>
       </div>
+
+      <footer>
+        <h1>Number Generator</h1>
+      </footer>
     </div>
 
-    <script>
-      function gerarNumAle(min, max, numerosGerados) {
-        var num;
-        do {
-          num = Math.floor(Math.random() * (max - min + 1)) + min;
-        } while (numerosGerados.includes(num));
-        return num;
-      }
-
-      function gerar50Numeros() {
-        var numeros = [];
-        var tabela = document.getElementById("tabelaNumeros");
-        var tbody = tabela.getElementsByTagName("tbody")[0];
-        tbody.innerHTML = "";
-
-        for (var i = 0; i < 10; i++) {
-          var tr = document.createElement("tr");
-          for (var j = 0; j < 5; j++) {
-            var numero = gerarNumAle(0, 100, numeros);
-            numeros.push(numero);
-            var td = document.createElement("td");
-            td.textContent = numero;
-            tr.appendChild(td);
-          }
-          tbody.appendChild(tr);
-        }
-      }
-
-      function gerar6Numeros() {
-        var numeros = [];
-        var tabela = document.getElementById("tabelaNumeros6");
-        var tbody = tabela.getElementsByTagName("tbody")[0];
-        tbody.innerHTML = "";
-
-        for (var i = 0; i < 1; i++) {
-          var tr = document.createElement("tr");
-          for (var j = 0; j < 6; j++) {
-            var numero = gerarNumAle(0, 60, numeros);
-            numeros.push(numero);
-            var td = document.createElement("td");
-            td.textContent = numero;
-            tr.appendChild(td);
-          }
-          tbody.appendChild(tr);
-        }
-      }
-
-      function gerar25Numeros() {
-        var numeros = [];
-        var tabela = document.getElementById("tabelaNumeros25");
-        var tbody = tabela.getElementsByTagName("tbody")[0];
-        tbody.innerHTML = "";
-
-        for (var i = 0; i < 3; i++) {
-          var tr = document.createElement("tr");
-          for (var j = 0; j < 5; j++) {
-            var numero = gerarNumAle(1, 25, numeros);
-            numeros.push(numero);
-            var td = document.createElement("td");
-            td.textContent = numero;
-            tr.appendChild(td);
-          }
-          tbody.appendChild(tr);
-        }
-      }
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>

@@ -1,0 +1,108 @@
+body {
+  background-color: rgb(198, 234, 255);
+
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 10px;
+  padding-bottom: 10px;
+
+}
+
+th{
+  background-color: rgba(255, 255, 255, 0.301);
+  border: 1px solid black;
+  padding: 4px;
+  text-align: center;
+}
+
+td {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  padding: 4px;
+  text-align: center;
+  font-weight: 900;
+
+}
+
+button {
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
+}
+button:focus {
+  outline: none; 
+}
+
+button:active {
+  transition: .3s;
+  background-color: #45a049; 
+}
+
+
+.container {
+  height: 100vh;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.gerador6 {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.63);
+  text-align: center;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gerador50 {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.63);
+
+  text-align: center;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gerador25 {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.63);
+
+  text-align: center;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+footer, header {
+  text-align: center;
+}
